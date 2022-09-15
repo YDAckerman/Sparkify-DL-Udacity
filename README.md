@@ -24,32 +24,44 @@ project were:
 # Running the Script(s)
 
 Provision the EMR cluster with:
-    
-    'cd resources'
-    'terraform apply'
+
+'''bash
+terraform apply
+'''
 
 Get the host address from the aws console and use it to fill in
 spark_cluster_ssh and spark_cluster_scp.
 
 Zip python-etl with:
-    
-    'zip -r etl.zip python-etl/'
-    
+
+'''bash
+zip -r etl.zip python-etl/
+'''
+
 And send it to the master node with:
 
-    'spark_cluster_scp.sh'
-    
+'''bash
+spark_cluster_scp.sh
+'''    
+
 ssh into the master node with:
 
-    'spark_cluster_ssh.sh'
-    
+
+'''bash
+spark_cluster_ssh.sh
+'''
+
 and unzip the pipeline with:
 
-    'unzip etl.zip'
+'''bash
+unzip etl.zip
+'''
     
 finally, cd into python-etl and run the spark job with:
 
-    'spark-submit etl.py'
+'''bash
+spark-submit etl.py
+'''
 
 # Repository Contents
 
