@@ -25,9 +25,9 @@ project were:
 
 Provision the EMR cluster with:
 
-'''bash
+```bash
 terraform apply
-'''
+```
 
 Get the host address from the aws console and use it to fill in
 spark_cluster_ssh and spark_cluster_scp.
@@ -42,7 +42,7 @@ And send it to the master node with:
 
 ```bash
 spark_cluster_scp.sh
-```    
+```
 
 ssh into the master node with:
 
