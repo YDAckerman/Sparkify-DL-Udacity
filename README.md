@@ -34,34 +34,34 @@ spark_cluster_ssh and spark_cluster_scp.
 
 Zip python-etl with:
 
-'''bash
+```bash
 zip -r etl.zip python-etl/
-'''
+```
 
 And send it to the master node with:
 
-'''bash
+```bash
 spark_cluster_scp.sh
-'''    
+```    
 
 ssh into the master node with:
 
 
-'''bash
+```bash
 spark_cluster_ssh.sh
-'''
+```
 
 and unzip the pipeline with:
 
-'''bash
+```bash
 unzip etl.zip
-'''
+```
     
 finally, cd into python-etl and run the spark job with:
 
-'''bash
+```bash
 spark-submit etl.py
-'''
+```
 
 # Repository Contents
 
